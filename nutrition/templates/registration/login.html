@@ -1,0 +1,159 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login — Caloriq</title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'nutrition/css/style.css' %}"
+    >
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <div class="auth-container">
+
+
+        <!-- BRAND -->
+
+        <div class="auth-brand">
+
+            <a href="/" class="logo">
+
+                <span class="logo-mark">✦</span>
+
+                CALORIQ
+
+            </a>
+
+        </div>
+
+
+        <!-- LOGIN CARD -->
+
+        <div class="auth-card">
+
+
+            <p class="eyebrow">
+                WELCOME BACK
+            </p>
+
+
+            <h1>
+                Continue your
+                <span>wellness journey.</span>
+            </h1>
+
+
+            <p class="auth-subtitle">
+
+                Sign in to keep track of your
+                nutrition, movement and progress.
+
+            </p>
+
+            {% if form.errors %}
+
+            <div class="form-error">
+
+                Username or password is incorrect.
+
+            </div>
+
+{% endif %}
+
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+
+                <!-- EMAIL -->
+
+                <div class="auth-field">
+
+                    <label for="username">
+                        username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="auth-field">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-button"
+                >
+
+                    Sign in →
+
+                </button>
+
+            </form>
+
+
+            <div class="auth-divider">
+
+                <span>or</span>
+
+            </div>
+
+
+            <p class="auth-switch">
+
+                New to Caloriq?
+
+                <a href="/signup/">
+                    Create an account
+                </a>
+
+            </p>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

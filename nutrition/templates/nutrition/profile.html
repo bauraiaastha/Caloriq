@@ -1,0 +1,374 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Your Profile — Caloriq</title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'nutrition/css/style.css' %}"
+    >
+
+</head>
+
+
+<body class="auth-page">
+
+
+<div class="auth-container">
+
+
+    <!-- BRAND -->
+
+    <div class="auth-brand">
+
+        <a href="/" class="logo">
+
+            <span class="logo-mark">✦</span>
+
+            CALORIQ
+
+        </a>
+
+    </div>
+
+
+    <!-- PROFILE CARD -->
+
+    <div class="auth-card">
+
+        <p class="eyebrow">
+            YOUR CALORIQ PROFILE
+        </p>
+
+
+        <h1>
+            Let's understand
+            <span>you better.</span>
+        </h1>
+
+
+        <p class="auth-subtitle">
+
+            Tell us a little about yourself so
+            Caloriq can personalize your nutrition.
+
+        </p>
+
+
+        {% if error %}
+
+            <div class="form-error">
+                {{ error }}
+            </div>
+
+        {% endif %}
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+
+            <!-- AGE -->
+
+            <div class="auth-field">
+
+                <label for="age">
+                    Age
+                </label>
+
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="10"
+                    max="100"
+                    placeholder="Enter your age"
+                    required
+                >
+
+            </div>
+
+
+            <!-- HEIGHT -->
+
+            <div class="auth-field">
+
+                <label for="height">
+                    Height (cm)
+                </label>
+
+                <input
+                    type="number"
+                    id="height"
+                    name="height"
+                    min="100"
+                    max="250"
+                    step="0.1"
+                    placeholder="e.g. 165"
+                    required
+                >
+
+            </div>
+
+
+            <!-- WEIGHT -->
+
+            <div class="auth-field">
+
+                <label for="weight">
+                    Weight (kg)
+                </label>
+
+                <input
+                    type="number"
+                    id="weight"
+                    name="weight"
+                    min="20"
+                    max="300"
+                    step="0.1"
+                    placeholder="e.g. 55"
+                    required
+                >
+
+            </div>
+
+
+            <!-- GENDER -->
+
+            <div class="auth-field">
+
+                <label for="gender">
+                    Gender
+                </label>
+
+                <select
+                    id="gender"
+                    name="gender"
+                    required
+                >
+
+                    <option value="">
+                        Select gender
+                    </option>
+
+                    <option value="male">
+                        Male
+                    </option>
+
+                    <option value="female">
+                        Female
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ACTIVITY -->
+
+            <div class="auth-field">
+
+                <label for="activity_level">
+                    Activity level
+                </label>
+
+                <select
+                    id="activity_level"
+                    name="activity_level"
+                    required
+                >
+
+                    <option value="">
+                        Select activity level
+                    </option>
+
+                    <option value="sedentary">
+                        Sedentary — little exercise
+                    </option>
+
+                    <option value="light">
+                        Lightly Active — 1–3 days/week
+                    </option>
+
+                    <option value="moderate">
+                        Moderately Active — 3–5 days/week
+                    </option>
+
+                    <option value="active">
+                        Very Active — 6–7 days/week
+                    </option>
+
+                    <option value="extra">
+                        Extra Active — intense training
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- GOAL -->
+
+            <div class="auth-field">
+
+                <label for="goal">
+                    Your goal
+                </label>
+
+                <select
+                    id="goal"
+                    name="goal"
+                    required
+                >
+
+                    <option value="">
+                        What are you working towards?
+                    </option>
+
+                    <option value="lose">
+                        Lose weight
+                    </option>
+
+                    <option value="maintain">
+                        Maintain weight
+                    </option>
+
+                    <option value="gain">
+                        Gain weight
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DIET -->
+
+            <div class="auth-field">
+
+                <label for="diet_preference">
+                    Diet preference
+                </label>
+
+                <select
+                    id="diet_preference"
+                    name="diet_preference"
+                    required
+                >
+
+                    <option value="">
+                        Select your preference
+                    </option>
+
+                    <option value="vegetarian">
+                        Vegetarian
+                    </option>
+
+                    <option value="non_vegetarian">
+                        Non-Vegetarian
+                    </option>
+
+                    <option value="vegan">
+                        Vegan
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- LANGUAGE -->
+
+            <div class="auth-field">
+
+                <label for="language">
+                    Preferred language
+                </label>
+
+                <select
+                    id="language"
+                    name="language"
+                    required
+                >
+
+                    <option value="english">
+                        English
+                    </option>
+
+                    <option value="hindi">
+                        हिन्दी
+                    </option>
+
+                    <option value="bengali">
+                        বাংলা
+                    </option>
+
+                    <option value="tamil">
+                        தமிழ்
+                    </option>
+
+                    <option value="telugu">
+                        తెలుగు
+                    </option>
+
+                    <option value="marathi">
+                        मराठी
+                    </option>
+
+                    <option value="gujarati">
+                        ગુજરાતી
+                    </option>
+
+                    <option value="kannada">
+                        ಕನ್ನಡ
+                    </option>
+
+                    <option value="malayalam">
+                        മലയാളം
+                    </option>
+
+                    <option value="punjabi">
+                        ਪੰਜਾਬੀ
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="auth-button"
+            >
+
+                Save my profile →
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+</body>
+
+</html>

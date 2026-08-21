@@ -1,0 +1,496 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Caloriq — Know Your Food</title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'nutrition/css/style.css' %}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+         ========================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-inner">
+
+
+            <!-- Logo -->
+
+            <a href="/" class="logo">
+
+                <span class="logo-mark">✦</span>
+
+                CALORIQ
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="nav-links">
+
+                <a href="#how-it-works">
+                    How it works
+                </a>
+
+                <a href="#stories">
+                    Food stories
+                </a>
+
+                <a href="#fitness">
+                    Fitness
+                </a>
+
+            </nav>
+
+
+            <!-- Actions -->
+
+            <div class="nav-actions">
+
+                <a href="{% url 'login' %}" class="login">
+                    Log in
+                </a>
+
+                <a href="{% url 'signup' %}" class="nav-button">
+                    Get Started
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+
+                <!-- LEFT -->
+
+                <div class="hero-content">
+
+
+                    <p class="eyebrow">
+
+                        AI • NUTRITION • WELLNESS
+
+                    </p>
+
+
+                    <h1>
+
+                        Know your food.
+
+                        <span>
+                            Nourish your everyday.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        Snap your food, understand what's
+                        on your plate, and discover smarter
+                        choices made for you.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#scanner"
+                            class="primary-button"
+                        >
+
+                            <span>◉</span>
+
+                            Scan Your Food
+
+                        </a>
+
+
+                        <a
+                            href="#how-it-works"
+                            class="secondary-button"
+                        >
+
+                            How it works →
+
+                        </a>
+
+                    </div>
+
+
+                    <p class="hero-hindi">
+
+                        खाना समझो · बेहतर चुनो
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- RIGHT -->
+
+                <div class="hero-visual">
+
+
+                    <div class="food-card">
+
+                        <div class="food-card-label">
+
+                            TODAY'S PLATE
+
+                        </div>
+
+
+                        <div class="food-image-placeholder">
+
+                            🍛
+
+                        </div>
+
+
+                        <div class="food-card-info">
+
+                            <div>
+
+                                <p>
+                                    Indian Thali
+                                </p>
+
+                                <span>
+                                    AI food analysis
+                                </span>
+
+                            </div>
+
+
+                            <strong>
+
+                                ~620 kcal
+
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Decorative element -->
+
+                    <div class="floating-card">
+
+                        <span>✦</span>
+
+                        AI analysed
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MARQUEE
+             ========================= -->
+
+        <section class="marquee">
+
+            <div class="marquee-track">
+
+                <span>
+                    SNAP YOUR FOOD
+                </span>
+
+                <span>✦</span>
+
+                <span>
+                    KNOW YOUR CALORIES
+                </span>
+
+                <span>✦</span>
+
+                <span>
+                    DISCOVER BETTER CHOICES
+                </span>
+
+                <span>✦</span>
+
+                <span>
+                    TRACK YOUR WELLNESS
+                </span>
+
+                <span>✦</span>
+
+                <span>
+                    SNAP YOUR FOOD
+                </span>
+
+                <span>✦</span>
+
+                <span>
+                    KNOW YOUR CALORIES
+                </span>
+
+            </div>
+
+        </section>
+        <!-- =========================
+     HOW CALORIQ WORKS
+     ========================= -->
+
+        <section class="how-it-works" id="how-it-works">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        THE CALORIQ METHOD
+                    </p>
+
+                    <h2>
+                        From your plate
+                        <span>to better choices.</span>
+                    </h2>
+
+                    <p>
+                        Caloriq turns a simple food photo into
+                        meaningful nutrition insights.
+                    </p>
+
+                </div>
+
+
+                <div class="steps">
+
+
+            <!-- STEP 01 -->
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-icon">
+                    ◉
+                    </div>
+
+                    <h3>
+                        Snap
+                    </h3>
+
+                    <p>
+                        Take a picture of your meal or
+                        upload a food image.
+                    </p>
+
+                
+
+                </div>
+
+
+            <!-- STEP 02 -->
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Understand
+                    </h3>
+
+                    <p>
+                        Caloriq identifies the food and
+                        estimates its calories and nutrition.
+                    </p>
+
+                
+
+                </div>
+
+
+            <!-- STEP 03 -->
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-icon">
+                        ◌
+                    </div>
+
+                    <h3>
+                        Choose
+                    </h3>
+
+                    <p>
+                        Discover healthier alternatives
+                        tailored to your goals.
+                    </p>
+
+                    
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+        <!-- =========================
+     FOOD SCANNER
+     ========================= -->
+
+        <section class="scanner-section" id="scanner">
+
+            <div class="container">
+
+                <div class="scanner-wrapper">
+
+                    <!-- LEFT SIDE -->
+
+                <div class="scanner-content">
+
+                    <p class="eyebrow">
+                        THE HEART OF CALORIQ
+                    </p>
+
+                    <h2>
+                        What's
+                        <span>on your plate?</span>
+                    </h2>
+
+                    <p class="scanner-description">
+                        Take a picture of your meal and let
+                        Caloriq understand what's on your plate.
+                    </p>
+
+                
+
+                </div>
+
+
+            <!-- RIGHT SIDE -->
+
+                <div class="scanner-box">
+
+                    <div class="scanner-circle">
+                        <span>⌾</span>
+                    </div>
+
+                    <h3>
+                        Scan your food
+                    </h3>
+
+                    <p>
+                        Take a photo or upload an image
+                        of your meal.
+                    </p>
+
+
+                    <div class="scanner-actions">
+
+                        <button
+                            type="button"
+                            class="scan-button"
+                        >
+                            <span>◉</span>
+                                Take a photo
+                        </button>
+
+
+                        <label
+                            for="food-image"
+                            class="upload-button"
+                        >
+                            Upload image
+                        </label>
+
+                        <input
+                            type="file"
+                            id="food-image"
+                            accept="image/*"
+                            hidden
+                        >
+
+                    </div>
+
+
+                        <p class="scanner-note">
+                            JPG, PNG · Food images only
+                        </p>
+
+                    
+
+
+                </div>
+
+            </div>
+
+
+    </div>
+
+</section>
+
+
+    </main>
+    <script src="{% static 'nutrition/js/scanner.js' %}"></script>
+
+
+</body>
+
+</html>
