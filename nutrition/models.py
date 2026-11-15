@@ -79,7 +79,40 @@ class Profile(models.Model):
         choices=LANGUAGE_CHOICES,
         default="english"
     )
+    
+    def __str__(self):
+        return self.user.username
+
+class Meal(models.Model):
+
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE
+    )
+
+    food_name = models.CharField(
+        max_length=200
+    )
+
+    calories = models.PositiveIntegerField()
+
+    protein = models.FloatField(
+        default=0
+    )
+
+    carbs = models.FloatField(
+        default=0
+    )
+
+    fat = models.FloatField(
+        default=0
+    )
+
+    created_at = models.DateTimeField(
+        auto_now_add=True
+    )
 
     def __str__(self):
 
-        return self.user.username
+        return f"{self.user.username} - {self.food_name}"
+    
